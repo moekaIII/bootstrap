@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/blogs', to: 'blogs#index'
   get '/stocks', to: 'stocks#index'
   
+  root 'static_pages/index'
+  
   resources :blogs do
     collection do
       post :confirm
