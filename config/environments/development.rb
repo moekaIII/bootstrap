@@ -4,6 +4,10 @@ Rails.application.configure do
   config.eager_load = false
 
   config.consider_all_requests_local = true
+  
+  config.web_console.whiny_requests = false
+  config.web_console.whitelisted_ips = '192.168.0.0/16'
+
 
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
