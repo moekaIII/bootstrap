@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
   [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
@@ -33,6 +34,15 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 Started POST "/__better_errors/01300e5f3f4ec01d/variables" for 127.0.0.1 at 2018-09-12 10:00:29 +0900
 Started GET "/" for 127.0.0.1 at 2018-09-12 10:01:02 +0900
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+Started GET "/" for 103.5.140.152 at 2018-09-16 02:24:50 +0000
+
+PG::ConnectionBad - FATAL:  database "sample_development" does not exist
+:
+
+Started POST "/__better_errors/b3b1726d3f136b97/variables" for 103.5.140.152 at 2018-09-16 02:24:50 +0000
+Started GET "/" for 103.5.140.152 at 2018-09-16 02:25:25 +0000
+>>>>>>> 9c85732313aa5289448f362a3376270b72fbdacf
 
 ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
 
@@ -40,6 +50,7 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 
 :
 
+<<<<<<< HEAD
 Started POST "/__better_errors/f14f527d4cc99de1/variables" for 127.0.0.1 at 2018-09-12 10:01:02 +0900
 Started POST "/__better_errors/f14f527d4cc99de1/variables" for 127.0.0.1 at 2018-09-12 10:01:13 +0900
 Started POST "/__better_errors/f14f527d4cc99de1/variables" for 127.0.0.1 at 2018-09-12 10:01:15 +0900
@@ -59,6 +70,34 @@ Migrating to AddNameToContacts (20180908050054)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
 Started GET "/" for 127.0.0.1 at 2018-09-12 10:13:28 +0900
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+Started POST "/__better_errors/d848e82959492825/variables" for 103.5.140.152 at 2018-09-16 02:25:26 +0000
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBlogs (20180829054641)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "content" text)[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180829054641"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContacts (20180907084520)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" bigserial primary key, "name" character varying, "email" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180907084520"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Contacts (20180908045444)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180908045444"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToContacts (20180908050054)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "contacts" ADD "name" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+Started GET "/" for 103.5.140.152 at 2018-09-16 02:26:05 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 9c85732313aa5289448f362a3376270b72fbdacf
 
 ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
 
@@ -66,6 +105,7 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 
 :
 
+<<<<<<< HEAD
 Started POST "/__better_errors/551677854169bd02/variables" for 127.0.0.1 at 2018-09-12 10:13:28 +0900
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
   [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -110,6 +150,18 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 Started POST "/__better_errors/d9e006f617f744ab/variables" for 127.0.0.1 at 2018-09-16 11:03:37 +0900
 Started GET "/" for 127.0.0.1 at 2018-09-16 11:03:55 +0900
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+Started POST "/__better_errors/7c3f81b3de580ae8/variables" for 103.5.140.152 at 2018-09-16 02:26:06 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToContacts (20180908050054)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "contacts" ADD "name" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+Started GET "/" for 103.5.140.152 at 2018-09-16 02:28:43 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 9c85732313aa5289448f362a3376270b72fbdacf
 
 ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
 
@@ -117,6 +169,7 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 
 :
 
+<<<<<<< HEAD
 Started POST "/__better_errors/2fcb487acb052bfa/variables" for 127.0.0.1 at 2018-09-16 11:03:55 +0900
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -27406,5 +27459,301 @@ Processing by ContactsController#new as HTML
   Rendering contacts/new.html.erb within layouts/application
   Rendered contacts/new.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+=======
+Started POST "/__better_errors/123215fe1063edab/variables" for 103.5.140.152 at 2018-09-16 02:28:43 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToContacts (20180908050054)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "contacts" ADD "name" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Contacts (20180908045444)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180908045444"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContacts (20180907084520)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "contacts"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180907084520"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContacts (20180916023627)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" bigserial primary key, "name" character varying, "email" character varying, "content" text)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180916023627"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-16 02:38:08.087529"], ["updated_at", "2018-09-16 02:38:08.087529"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 103.5.140.152 at 2018-09-16 02:38:46 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 103.5.140.152 at 2018-09-16 02:38:55 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 800ms (Views: 706.5ms | ActiveRecord: 69.8ms)
+
+
+Started POST "/contacts" for 103.5.140.152 at 2018-09-16 02:38:59 +0000
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t5hE3WE4TKvJHb4Vg8YeZy+L14BNoHVkep9I+AXbLGcmop3TUSCUfJ3CYtNXm2AZOLpyWSguyYpm5kEK4V58kA==", "contact"=>{"name"=>"", "email"=>"", "content"=>""}, "commit"=>"Create Contact"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/contacts" for 103.5.140.152 at 2018-09-16 02:39:09 +0000
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bvkzmpLFp9EgJVB2e+k5qsi5ijYRrluBrcqEigFgvcP/w+qUot1/BnT6jLCvtEfU34gv73Qg52+xs4145eXtNA==", "contact"=>{"name"=>"aaa", "email"=>"aaa", "content"=>"aaa"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "content") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "aaa"], ["email", "aaa"], ["content", "aaa"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://blog-app-pepency.c9users.io/contacts/new
+Completed 302 Found in 11ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/contacts/new" for 103.5.140.152 at 2018-09-16 02:39:09 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 103.5.140.152 at 2018-09-16 02:39:36 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 20.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs/new" for 103.5.140.152 at 2018-09-16 02:39:38 +0000
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.4ms)
+  Rendered blogs/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/blogs/confirm" for 103.5.140.152 at 2018-09-16 02:39:44 +0000
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kSyTv4YgpOzD2RcLK7yXl56PaZxPOmjTnpeERixjELCBqgNgGGXM481CgjtC5qlLz7suazGYB/Iqnxmz8Opqng==", "blog"=>{"title"=>"GoodMorning!", "content"=>"haroharo"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 103.5.140.152 at 2018-09-16 02:39:47 +0000
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tpHajRmA5xDWqDbSnh4F9Dmrdzlp75w4CpCSmooRJHcnqwODKZg/x4J36hRKQ3uKLprS4AxhINYW6ZtobpR0gA==", "blog"=>{"title"=>"GoodMorning!", "content"=>"haroharo"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content") VALUES ($1, $2) RETURNING "id"[0m  [["title", "GoodMorning!"], ["content", "haroharo"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://blog-app-pepency.c9users.io/blogs
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/blogs" for 103.5.140.152 at 2018-09-16 02:39:47 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/1/edit" for 103.5.140.152 at 2018-09-16 02:39:51 +0000
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.4ms)
+  Rendered blogs/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 20.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/blogs/1" for 103.5.140.152 at 2018-09-16 02:39:53 +0000
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gd2gHVuhn6cK1u+sqwbHQkHSUjE3HM79DNi1dDT/4LrSpmSLydWn6zC/7eYLQeDSty89L8yJIpfHBJA5zxueyg==", "blog"=>{"title"=>"GoodMorning!!!!", "content"=>"haroharo"}, "commit"=>"Update Blog", "id"=>"1"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "blogs" SET "title" = $1 WHERE "blogs"."id" = $2[0m  [["title", "GoodMorning!!!!"], ["id", 1]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://blog-app-pepency.c9users.io/blogs
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/blogs" for 103.5.140.152 at 2018-09-16 02:39:53 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/blogs/1" for 103.5.140.152 at 2018-09-16 02:40:02 +0000
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d8prA3Q+wEzvDoGXcp7dCY9Iyqmplyen41+IQk1yw1Pm8LINRCYYm7vRXVGmw6N3mHlvcMwZm0n/JoGwqfeTpA==", "id"=>"1"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://blog-app-pepency.c9users.io/blogs
+Completed 302 Found in 8ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/blogs" for 103.5.140.152 at 2018-09-16 02:40:02 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/new" for 103.5.140.152 at 2018-09-16 02:40:05 +0000
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.0ms)
+  Rendered blogs/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for 103.5.140.152 at 2018-09-16 02:40:15 +0000
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q3Bhi4QV8JweyaqoLvQIv3Q5tFudKwvwwwVrksej/nO79vFUGlCYkxBSP5hHrjZjJQ3zrOOJZNF3DfZnGyqEXQ==", "blog"=>{"title"=>"GoodMorning!!!!", "content"=>"haroharo"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 103.5.140.152 at 2018-09-16 02:40:17 +0000
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YyRpMlsRi1plemMfMlrpDbsBf4lfRJiV3OnYTACCdrzyHrA8awlTjTGlv9nmB5dzrDDaUDrKJHvAkNG+5AcmSw==", "blog"=>{"title"=>"GoodMorning!!!!", "content"=>"haroharo"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content") VALUES ($1, $2) RETURNING "id"[0m  [["title", "GoodMorning!!!!"], ["content", "haroharo"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://blog-app-pepency.c9users.io/blogs
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/blogs" for 103.5.140.152 at 2018-09-16 02:40:17 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/blog-app/blog/views/blogs/index.html.erb" for 219.113.146.130 at 2018-09-16 07:09:23 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/blog-app/blog/views/blogs/index.html.erb"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blog-app/blog/views/blogs/index.html.erb" for 219.113.146.130 at 2018-09-16 07:13:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/blog-app/blog/views/blogs/index.html.erb"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blogs" for 219.113.146.130 at 2018-09-16 07:15:11 +0000
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (115.3ms)
+Completed 200 OK in 391ms (Views: 296.1ms | ActiveRecord: 89.9ms)
+>>>>>>> 9c85732313aa5289448f362a3376270b72fbdacf
 
 
