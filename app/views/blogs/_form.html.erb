@@ -1,3 +1,8 @@
+
+<section class="main-header">
+<h1>Create</h1>
+</section>
+
 <%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
   <% if @blog.errors.any? %>
     <div id="error_explanation">
@@ -9,16 +14,21 @@
       </ul>
     </div>
   <% end %>
-      
-  <div class="blog_title">
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div>
-  <div class="blog_title">
-    <%= form.label :content %><br>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
 
-<%= link_to "戻る", blogs_path %>
+<div class="container">
+  <ul class="row">
+  <div class="blog_title">
+    <li class="col-xs-1, col-md-12"><%= form.label :title %></li>
+    <li class="col-xs-1, col-md-12"><%= form.text_field :title %></li>
+  </div>
+  <div class="blog_title">
+    <li class="col-xs-1, col-md-12"><%= form.label :content %></li>
+    <textarea id="msg" name="msg" size="100"></textarea>
+  </div>
+    <br>
+  <div>
+    <input class="btn btn-primary" type="submit" value="Create">
+  </div>
+<% end %>
+<br>
+<%= link_to "Back", blogs_path %>

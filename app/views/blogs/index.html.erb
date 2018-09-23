@@ -1,23 +1,26 @@
-<h1>ブログ一覧</h1>
 
-<p><%= notice %></p>
+<body>
+  <section class="main-header">
+    <h1>Blog</h1>
+  </section>
 
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th>
-  </tr>
+  <section class="about">
+    <div class="container">
+      <h1>About Blog</h1>
+        <ul class="row">
+          <br>
+          <li class="col-xs-1, col-md-6, col-lg-12">Blogは、DICの生徒として試しに作ってみたBlog機能を持つアプリケーションです。</li>
+          <br>
+          <br>
+          <li class="col-xs-1, col-md-6, col-lg-12">Blogを一言で表すと、Blogアプリです(笑)。</li>
+          <br>
+          <br>
+          <li class="col-xs-1, col-md-6, col-lg-12">日常の中の特別を見つけて記録し共有することで、シェアハピに繋げよう！</li>
+        <ul>
+    </div>
 
-<% @blogs.each do |blog| %>
-  <tr>
-    <td><%= blog.title %></td>
-    <td><%= blog.content %></td>
-    <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
-    <td><%= link_to 'ブログを編集する', edit_blog_path(blog.id), data: {confirm: '本当に編集しますか？'} %></td>
-    <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete,data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
+  </section>
 
-<br>
-<%= link_to '新しくブログを作成する',new_blog_path %>
+
+</body>
+</html>

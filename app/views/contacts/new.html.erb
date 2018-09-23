@@ -1,4 +1,7 @@
-<h1>お問い合わせ</h1>
+<section class="main-header">
+  <h1>Contacts</h1>
+</section>
+
 <%= notice %>
 <%= form_with(model: @contact, local: true) do |form| %>
   <% if @contact.errors.any? %>
@@ -11,18 +14,22 @@
       </ul>
     </div>
   <% end %>
-  
+<div class="contacts">
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  <br>
    <div>
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
+  <br>
   <div>
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <textarea id="msg" name="msg" size="100"></textarea>
   </div>
-  <%= form.submit %>
+  <br>
+  <input class="btn btn-primary" type="submit" value="submit">
 <%end%>
+</div>

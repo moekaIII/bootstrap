@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Sample</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+    <header>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="http://localhost:3000/blogs">top</a></li>
+        <li><a href="http://localhost:3000/blogs/list">list</a></li>
+        <li><a href="http://localhost:3000/blogs/new">create</a></li>
+        <li><a href="http://localhost:3000/contacts/new">contacts</a></li>
+      </ul>
+    </header>
+
     <%= yield %>
+
+
+    <footer>
+      <p>株式会社mooon</p>
+      <p>©️ All Copyrights mooon Corp.</p>
+    </footer>
+
   </body>
 </html>
