@@ -16,10 +16,10 @@
     <header>
       <ul>
         <li><a href="#">Blog</a></li>
-        <li><%= link_to 'top', blogs_path %></li>
-        <li><%= link_to 'list', list_blogs_path %></li>
-        <li><%= link_to 'create', new_blog_path %></li>
-        <li><%= link_to 'contacts', new_contact_path %></li>
+        <li><%= link_to 'top', blogs_path(blog.id) %></li>
+        <li><%= link_to 'list', list_blogs_path(blog.id) %></li>
+        <li><%= link_to 'create', new_blog_path(blog.id) %></li>
+        <li><%= link_to 'contacts', new_contact_path(blog.id) %></li>
       </ul>
     </header>
 
