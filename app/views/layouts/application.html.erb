@@ -16,10 +16,10 @@
     <header>
       <ul>
         <li><%= link_to 'Blog', blogs_path %></li>
-        <li><%= link_to 'Top', :controller => "blogs", :action => "index" %></li>
-        <li><%= link_to 'List', :controller => "blogs", :action => "list" %></li>
-        <li><%= link_to 'Create', :controller => "blogs", :action => "new" %></li>
-        <li><%= link_to 'Contacts', :controller => "contacts", :action => "new" %></li>
+        <li><%= link_to 'Top', blogs_path %></li>
+        <li><%= link_to 'List', list_blogs_path %></li>
+        <li><%= link_to 'Create', new_blog_path %></li>
+        <li><%= link_to 'Contacts', new_contact_path %></li>
       </ul>
     </header>
 
