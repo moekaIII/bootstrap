@@ -38,7 +38,5 @@ Rails.application.configure do
 
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
 
-  ActionController::AbstractRequest.relative_url_root = "/~style.css"
-
 
 end
