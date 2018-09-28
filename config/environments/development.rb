@@ -4,7 +4,7 @@ Rails.application.configure do
   config.eager_load = false
 
   config.consider_all_requests_local = true
-  
+
   config.web_console.whiny_requests = false
   config.web_console.whitelisted_ips = '192.168.0.0/16'
 
@@ -35,8 +35,10 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  
+
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
-  
+
+  ActionController::AbstractRequest.relative_url_root = "/~style.css"
+
 
 end
