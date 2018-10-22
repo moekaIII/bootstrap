@@ -13,7 +13,7 @@
   <tr class="row">
     <td class="col-xs-1, col-md-2"><%= blog.title %></td>
     <td class="col-xs-1, col-md-6"><%= blog.content %></td>
-    <td class="col-xs-1, col-md-1"><%= blog.user %></td>
+    <td class="col-xs-1, col-md-1"><%= blog.user.name %></td>
     <td class="col-xs-1, col-md-1"><%= link_to 'Detal', blog_path(blog.id) %></td>
   <% if blog.user_id == current_user.id %>
     <td class="col-xs-1, col-md-1"><%= link_to 'Edit', edit_blog_path(blog.id), data: {confirm: 'Are you sure？'} %></td>
