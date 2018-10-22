@@ -3,21 +3,20 @@
 </section>
 
 <p><%= notice %></p>
-<div class="container">
 <table class="table">
-  <tr class="row">
-    <th class="col-md-2">Title</th>
-    <th class="col-md-2">Content</th>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
   </tr>
 <% @blogs.each do |blog| %>
   <tr>
-    <td class="col-xs-1, col-md-2"><%= blog.title %></td>
-    <td class="col-xs-1, col-md-6"><%= blog.content %></td>
-    <td class="col-xs-1, col-md-1"><%= blog.user.name %></td>
-    <td class="col-xs-1, col-md-1"><%= link_to 'Detal', blog_path(blog.id) %></td>
+    <td><%= blog.title %></td>
+    <td><%= blog.content %></td>
+    <td><%= blog.user.name %></td>
+    <td><%= link_to 'Detal', blog_path(blog.id) %></td>
   <% if blog.user_id == current_user.id %>
-    <td class="col-xs-1, col-md-1"><%= link_to 'Edit', edit_blog_path(blog.id), data: {confirm: 'Are you sure？'} %></td>
-    <td class="col-xs-1, col-md-1"><%= link_to 'Delete', blog_path(blog.id), method: :delete,data: { confirm: 'Are you sure？' } %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog.id), data: {confirm: 'Are you sure？'} %></td>
+    <td><%= link_to 'Delete', blog_path(blog.id), method: :delete,data: { confirm: 'Are you sure？' } %></td>
   <% end %>
   </tr>
 <% end %>
