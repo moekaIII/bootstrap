@@ -3,15 +3,6 @@
 <p>メールアドレス: <%= @user.email %></p>
 
 <h3>お気に入り一覧</h3>
-  <table class="table">
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-    </tr>
 <% @favorite.each do |favorite| %>
-    <tr>
-      <td><%= favorite.blog.title %></td>
-      <td><%= favorite.blog.content %></td>
-    </tr>
+      <p><%= favorite.blog.title %></p>
 <% end %>
-</table>
