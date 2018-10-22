@@ -10,7 +10,7 @@
     <th class="col-md-2">Content</th>
   </tr>
 <% @blogs.each do |blog| %>
-  <tr class="row">
+  <tr>
     <td class="col-xs-1, col-md-2"><%= blog.title %></td>
     <td class="col-xs-1, col-md-6"><%= blog.content %></td>
     <td class="col-xs-1, col-md-1"><%= blog.user.name %></td>
