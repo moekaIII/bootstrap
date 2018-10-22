@@ -32,13 +32,8 @@
       </ul>
     </header>
 
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
-
     <%= yield %>
-
-
+    
     <footer>
       <p>株式会社mooon</p>
       <p>©️ All Copyrights mooon Corp.</p>

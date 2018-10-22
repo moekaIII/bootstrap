@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
     if @blog.save
       redirect_to list_blogs_path, notice: "ブログを作成しました！"
     else
@@ -23,6 +24,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
 
@@ -39,16 +41,17 @@ class BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    redirect_to blogs_path, notice:"ブログを削除しました！"
+    redirect_to list_blogs_path, notice:"ブログを削除しました！"
   end
 
   def confirm
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
     render :new if @blog.invalid?
   end
 
   private
-  
+
   def blog_params
     params.require(:blog).permit(:title, :content)
   end
