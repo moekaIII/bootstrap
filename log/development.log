@@ -46005,3 +46005,155 @@ Completed 404 Not Found in 16ms (ActiveRecord: 0.4ms)
 ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=style:
   app/controllers/blogs_controller.rb:59:in `set_blog'
 
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-22 16:13:52 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/list.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `users' for #<Blog:0x00007fb4dcb89d48>
+Did you mean?  user
+               user=:
+  app/views/blogs/list.html.erb:16:in `block in _app_views_blogs_list_html_erb___3115460649444785688_70207386772340'
+  app/views/blogs/list.html.erb:12:in `_app_views_blogs_list_html_erb___3115460649444785688_70207386772340'
+
+Started POST "/__better_errors/d6ccdfd0825c8e2d/variables" for 127.0.0.1 at 2018-10-22 16:13:52 +0900
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-22 16:17:28 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/list.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `blog' for #<Blog:0x00007fb4d934e550>:
+  app/views/blogs/list.html.erb:16:in `block in _app_views_blogs_list_html_erb___3115460649444785688_70207357321980'
+  app/views/blogs/list.html.erb:12:in `_app_views_blogs_list_html_erb___3115460649444785688_70207357321980'
+
+Started POST "/__better_errors/e7a45b4e14e94f8e/variables" for 127.0.0.1 at 2018-10-22 16:17:28 +0900
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-22 16:17:41 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/list.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `blogs' for #<Blog:0x00007fb4dbd3dcf8>:
+  app/views/blogs/list.html.erb:16:in `block in _app_views_blogs_list_html_erb___3115460649444785688_70207356950580'
+  app/views/blogs/list.html.erb:12:in `_app_views_blogs_list_html_erb___3115460649444785688_70207356950580'
+
+Started POST "/__better_errors/48fbb9153c991bfa/variables" for 127.0.0.1 at 2018-10-22 16:17:41 +0900
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-22 16:17:52 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered blogs/list.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 55ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/normalize.css" for 127.0.0.1 at 2018-10-22 16:17:53 +0900
+Processing by BlogsController#show as CSS
+  Parameters: {"id"=>"normalize"}
+Started GET "/blogs/style.css" for 127.0.0.1 at 2018-10-22 16:17:53 +0900
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Processing by BlogsController#show as CSS
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=normalize:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+  Parameters: {"id"=>"style"}
+  [1m[36mBlog Load (7.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 7.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=style:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+Started GET "/blogs/normalize.css" for 127.0.0.1 at 2018-10-22 16:17:53 +0900
+Processing by BlogsController#show as CSS
+  Parameters: {"id"=>"normalize"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=normalize:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-22 16:17:59 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Blog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Blog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 49.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-23 14:32:51 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (6.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered blogs/list.html.erb within layouts/application (121.8ms)
+Completed 200 OK in 381ms (Views: 330.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/blogs/10" for 127.0.0.1 at 2018-10-23 14:32:57 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFavorite Load (12.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."blog_id" = $2 LIMIT $3[0m  [["user_id", 3], ["blog_id", 10], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 72ms (Views: 35.1ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-23 14:33:00 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered blogs/list.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 106ms (Views: 97.8ms | ActiveRecord: 2.8ms)
+
+
