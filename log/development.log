@@ -46157,3 +46157,79 @@ Processing by BlogsController#list as HTML
 Completed 200 OK in 106ms (Views: 97.8ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-23 15:24:40 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered blogs/list.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 68ms (Views: 62.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs/normalize.css" for 127.0.0.1 at 2018-10-23 15:24:41 +0900
+Processing by BlogsController#show as CSS
+  Parameters: {"id"=>"normalize"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Started GET "/blogs/style.css" for 127.0.0.1 at 2018-10-23 15:24:41 +0900
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Processing by BlogsController#show as CSS
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=normalize:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+  Parameters: {"id"=>"style"}
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=style:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+Started GET "/blogs/list" for 127.0.0.1 at 2018-10-23 15:25:13 +0900
+Processing by BlogsController#list as HTML
+  Rendering blogs/list.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered blogs/list.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 243ms (Views: 230.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/blogs/normalize.css" for 127.0.0.1 at 2018-10-23 15:25:14 +0900
+Processing by BlogsController#show as CSS
+  Parameters: {"id"=>"normalize"}
+Started GET "/blogs/style.css" for 127.0.0.1 at 2018-10-23 15:25:14 +0900
+Processing by BlogsController#show as CSS
+  Parameters: {"id"=>"style"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=style:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
+  [1m[36mBlog Load (2.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 36ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=normalize:
+  app/controllers/blogs_controller.rb:59:in `set_blog'
+
