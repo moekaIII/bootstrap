@@ -26,6 +26,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :letter_opener_web
+
   config.active_support.deprecation = :log
 
   config.active_record.migration_error = :page_load
@@ -37,6 +40,4 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
-
-
 end

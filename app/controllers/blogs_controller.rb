@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only:[:show, :edit, :update, :destroy]
+  before_action :set_blog, only:[:show, :update, :destroy]
+  before_action :user_check, only:[:edit]
 
   def list
     @blogs = Blog.all
@@ -17,6 +18,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
     if @blog.save
+      CreateMailer.create_mail(@blog).deliver
       redirect_to list_blogs_path, notice: "ブログを作成しました！"
     else
       render 'new'
@@ -57,5 +59,14 @@ class BlogsController < ApplicationController
 
   def set_blog
     @blog = Blog.find(params[:id])
+  end
+
+  def user_check
+    @blog_id = Blog.find(params[:id]).user_id
+    if @blog_id == current_user.id
+      @blog = Blog.find(params[:id])
+    else
+      redirect_to list_blogs_path
+    end
   end
 end
