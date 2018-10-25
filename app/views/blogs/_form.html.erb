@@ -25,6 +25,15 @@
     <li class="col-xs-1, col-md-12"><%= form.label :content %></li>
     <li class="col-xs-1, col-md-12"><%= form.text_field :content %></li>
   </div>
+
+  <br>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= image_tag(@blog.image.url) if @blog.image.url %>
+    <%= form.file_field :image %>
+  </div>
+
     <br>
   <div>
     <input class="btn btn-primary" type="submit" value="Create">

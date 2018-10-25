@@ -1,6 +1,7 @@
 <h1>Detail</h1>
 <p>Title：<%= @blog.title %></p>
 <p>Content：<%= @blog.content %></p>
+<p><%= image_tag @blog.image.url if @blog.image.present? %></p>
 
 
 <% unless @blog.user_id == current_user.id %>

@@ -24,5 +24,8 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
   <br>
+  <%= f.label :image,"top image" %>
+  <%= f.file_field :image %>
+  <br>
   <%= f.submit "Create my account" %>
 <% end %>
